@@ -57,7 +57,7 @@ namespace Hotel.Services
                 RoomId = dto.RoomId,
                 CheckInDate = dto.CheckInDate,
                 CheckOutDate = dto.CheckOutDate,
-                Status = Enum.StatusEnum.Pending,
+                Status = StatusEnum.Confirmed,
                 CreatedAt = DateTime.Now
             };
 
