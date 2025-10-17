@@ -29,16 +29,6 @@ namespace Hotel.Infrastructure.Repositories
             return detail;
         }
 
-        public void UpdateDescription(int roomId, string description)
-        {
-            var existing = GetByRoomId(roomId);
-            if (existing != null)
-            {
-                existing.Description = description;
-                _appDbContext.SaveChanges();
-            }
-        }
-
         public void UpdateHasWifi(int roomId, bool hasWifi)
         {
             var existing = GetByRoomId(roomId);

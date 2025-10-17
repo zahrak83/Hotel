@@ -34,7 +34,7 @@ namespace Hotel.Infrastructure.Repositories
         public bool IsRoomAvailable(int roomId, DateTime checkIn, DateTime checkOut)
         {
             return !_appDbContext.Reservations
-                .Any(r => r.RoomId == roomId && r.Status != Enum.StatusEnum.Canceled && (checkIn < r.CheckOutDate && checkOut > r.CheckInDate));
+                .Any(r => r.RoomId == roomId && r.Status != StatusEnum.Canceled && (checkIn < r.CheckOutDate && checkOut > r.CheckInDate));
         }
 
         public Reservation? GetById(int reservationId)

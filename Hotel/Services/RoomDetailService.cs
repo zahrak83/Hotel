@@ -41,12 +41,6 @@ namespace Hotel.Services
                     HasAirConditioner = d.HasAirConditioner
                 }).ToList();
         }
-
-        public void UpdateDescription(int roomId, string description)
-        {
-            _roomDetailRepository.UpdateDescription(roomId, description);
-        }
-
         public void UpdateHasWifi(int roomId, bool hasWifi)
         {
             _roomDetailRepository.UpdateHasWifi(roomId, hasWifi);

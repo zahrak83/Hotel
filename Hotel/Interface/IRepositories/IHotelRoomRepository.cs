@@ -9,8 +9,8 @@ namespace Hotel.Interface.IRepositories
         HotelRoom? GetByRoomNumber(int roomNumber);
         HotelRoom Add(HotelRoom room);
         bool IsRoomNumberTaken(int roomNumber);
-        public HotelRoom? GetByRoomId(int Id);
-        public void UpdatePrice(int id, int pricePerNight);
+        HotelRoom? GetByRoomId(int Id);
+        void UpdatePrice(int id, int pricePerNight);
     }
 }
 

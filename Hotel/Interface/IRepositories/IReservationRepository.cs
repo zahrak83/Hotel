@@ -8,7 +8,7 @@ namespace Hotel.Interface.IRepositories
         List<Reservation> GetByUserId(int userId);
         Reservation Add(Reservation reservation);
         bool IsRoomAvailable(int roomId, DateTime checkIn, DateTime checkOut);
-        public Reservation? GetById(int reservationId);
-        public void CancelReservation(Reservation reservation);
+        Reservation? GetById(int reservationId);
+        void CancelReservation(Reservation reservation);
     }
 }
