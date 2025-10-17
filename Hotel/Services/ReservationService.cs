@@ -3,10 +3,11 @@ using Hotel.Entities;
 using Hotel.Enum;
 using Hotel.Infrastructure.Repositories;
 using Hotel.Interface.IRepositories;
+using Hotel.Interface.IServices;
 
 namespace Hotel.Services
 {
-    public class ReservationService
+    public class ReservationService : IReservationService
     {
         private readonly IReservationRepository _reservationRepository;
 

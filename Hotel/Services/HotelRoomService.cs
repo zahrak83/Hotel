@@ -2,10 +2,11 @@
 using Hotel.Entities;
 using Hotel.Infrastructure.Repositories;
 using Hotel.Interface.IRepositories;
+using Hotel.Interface.IServices;
 
 namespace Hotel.Services
 {
-    public class HotelRoomService
+    public class HotelRoomService : IHotelRoomService
     {
         private readonly IHotelRoomRepository _hotelRoomRepository;
         private readonly IRoomDetailRepository _roomDetailRepository;
@@ -71,11 +72,6 @@ namespace Hotel.Services
                 PricePerNight = room.PricePerNight,
                 CreatedAt = room.CreatedAt
             };
-        }
-
-        public bool IsRoomNumberTaken(int roomNumber)
-        {
-            return _hotelRoomRepository.IsRoomNumberTaken(roomNumber);
         }
         public void UpdatePrice(int roomId, int price)
         {
